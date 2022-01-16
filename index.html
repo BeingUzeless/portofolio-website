@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Nom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+<div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
+    <div class="context">
+    <div class="navbar">
+        <div class="nav-buttons">
+            <a href="https://discord.gg/ccgXf8pYF4" class="nav-btn">Discord</a>
+
+            <a href="https://github.com/BeingUzeless/" class="nav-btn">GitHub</a>
+
+            <a href="#" class="nav-btn">TikTok</a>
+        </div>
+    </div>
+
+
+    <div class="header">
+        <div class="img-border">
+        <img src="https://cdn.discordapp.com/avatars/853063343547875328/775051153f12d737a6d52102883f74fe.gif" alt="Logo" class="header-img">
+		</div>
+        <br>
+        <div class="header-desc">
+		<p>Décrivez vous ici.</p>
+        </div>
+    </div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #ffeb00;
+    --seconde: #ffc400;
+    --back: #282828;
+    --blanc: #fefefe;
+}
+
+ body, html {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     overflow-x: hidden;
+font-family: 'Readex Pro', sans-serif;
+background-color: var(--back);
+box-shadow: 0 0 400px var(--back) inset;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.nav-buttons a {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 17px;
+    background: linear-gradient(117deg, var(--primary) 35%, var(--seconde) 100%);
+    color: var(--back);
+    transition: ease-in-out 0.2s;
+}
+
+.nav-buttons a:hover {
+    height: 42px;
+    width: 152px;
+    transition: ease-in-out 0.2s;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.header img {
+    height: 210px;
+    width: 210px;
+    border-radius: 100%;
+    border: 7px solid var(--back);
+}
+
+.img-border {
+    display: flex;
+    justify-content: center;
+    border: solid 5px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--back), var(--back)), radial-gradient(circle at top left, var(--seconde), var(--primary));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    height: 223px;
+    width: 223px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: ease-in-out 0.2s;
+    animation: circle 3s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    background-image: linear-gradient(0deg, var(--back), var(--back)), radial-gradient(circle at top left, var(--seconde), var(--primary));
+  }
+  100%{
+    background-image: linear-gradient(360deg, var(--back), var(--back)), radial-gradient(circle at top left, var(--seconde), var(--primary));
+
+  }
+}
+
+
+.img-border:hover {
+    border: double 6px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--back), var(--back)), radial-gradient(circle at top left, var(--seconde), var(--primary));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: ease-in-out 0.2s;
+}
+
+.header-desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+}
+
+.header-desc p {
+    color: var(--blanc);
+    text-align: center;
+    opacity: 0.6;
+}
+
+/* Back */
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+
+
+.area{
+    width: 100%;
+    height:100vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+</style>
+</body>
+</html>
